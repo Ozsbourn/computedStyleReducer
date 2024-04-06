@@ -43,7 +43,7 @@ class CompStylesHandler {
         this._currClassName = className;
 
         // If first appearance just add in map
-        if (!this._intrs.get(this._currClassName)) {
+        if (!this._intrs.has(this._currClassName)) {
             this._intrs.set(this._currClassName, obj)
         } else { 
             // In other case check correctivity of them and fix if need
