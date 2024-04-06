@@ -47,7 +47,9 @@ class CompStylesHandler {
             this._intrs.set(this._currClassName, obj)
         } else { 
             // In other case check correctivity of them and fix if need
-            const newObj = this._reduceStyles(obj);
+            const newObj = {
+                ...this._reduceStyles(obj),
+            };
             this._intrs.set(this._currClassName, newObj);
         }
 
